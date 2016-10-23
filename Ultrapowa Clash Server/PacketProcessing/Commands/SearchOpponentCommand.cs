@@ -35,6 +35,8 @@ namespace UCS.PacketProcessing.Commands
 
         public override void Execute(Level level)
         {
+            DatabaseManager.Singelton.Save(level);
+
             var l = ObjectManager.GetRandomOnlinePlayer();
             if (l != null)
             {
