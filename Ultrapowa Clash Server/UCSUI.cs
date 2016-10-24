@@ -48,11 +48,7 @@ namespace UCS
             InitializeComponent();
         }
 
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void UCSUI_Load(object sender, EventArgs e)
         {
             metroTextBox1.Text = ""+LocalNetworkIP;
@@ -60,40 +56,20 @@ namespace UCS
             onlinepltxt.Text = Convert.ToString(ResourcesManager.GetOnlinePlayers().Count);
             metroLabel5.Text = Convert.ToString(ResourcesManager.GetConnectedClients().Count);
             onlinepltxt.TextChanged += Onlinepltxt_TextChanged;
-           
+            
         }
 
         private void Onlinepltxt_TextChanged(object sender, EventArgs e)
         {
             onlinepltxt.Text += ResourcesManager.GetOnlinePlayers().Count;
         }
-
-        private void onlinepltxt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void restarbtn_Click(object sender, EventArgs e)
         {
 
             Process.Start("restarter.bat");
         }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        
         private void metroButton2_Click(object sender, EventArgs e)
         {
 
@@ -135,7 +111,7 @@ namespace UCS
             {
                 metroLabel16.Text = "";
                 PlayerNameBox.Clear();
-                
+                txtPlayerGems.Clear();
                 lvlbox.Clear();
                 StatusComboBox.Clear();
                 PlayerScoreBox.Clear();
@@ -147,6 +123,7 @@ namespace UCS
 
                 lvlbox.Text += ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetPlayerAvatar().GetAvatarLevel();
                 metroLabel16.Text += ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetPlayerAvatar().GetAllianceId();
+                txtPlayerGems.Text += ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetPlayerAvatar().GetDiamonds();
                 if (ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetAccountStatus() == 0)
                 {
                     StatusComboBox.Text = "Normal";
@@ -158,10 +135,8 @@ namespace UCS
             }
             catch(Exception)
             {
-               
                 MessageBox.Show("Can't Load Player Profile, This Player ID Not Found : " + PlayerID.Text,"Message",MessageBoxButtons.OK,MessageBoxIcon.Information );
-
-                
+ 
             }
             
         }
@@ -175,25 +150,11 @@ namespace UCS
             ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetPlayerAvatar().SetScore(int.Parse(PlayerScoreBox.Text));
             ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetPlayerAvatar().SetName(PlayerNameBox.Text);
             ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetPlayerAvatar().SetAvatarLevel(int.Parse(lvlbox.Text));
-            MessageBox.Show("Player Profile Updated.");
-        }
-
-        private void PlayerID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel16_Click(object sender, EventArgs e)
-        {
-
+            ResourcesManager.GetPlayer(long.Parse(PlayerID.Text)).GetPlayerAvatar().SetDiamonds(int.Parse(txtPlayerGems.Text));
+            MessageBox.Show("Player Profile Updated.","Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         
-
-        private void metroTabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void metroButton4_Click(object sender, EventArgs e)
         {
@@ -209,21 +170,7 @@ namespace UCS
             
         }
 
-        private void metroTextBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTextBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTextBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void Loadbtn_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
@@ -238,25 +185,6 @@ namespace UCS
             }
                
         }
-
-        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lvlbox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
     }
 }

@@ -42,6 +42,14 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.Loadbtn = new MetroFramework.Controls.MetroButton();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
@@ -58,14 +66,6 @@
             this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox8 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.Loadbtn = new MetroFramework.Controls.MetroButton();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.PlayerRankBox = new MetroFramework.Controls.MetroTextBox();
             this.PlayerScoreBox = new MetroFramework.Controls.MetroTextBox();
@@ -83,25 +83,27 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.PlayerID = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.txtPlayerGems = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(707, 386);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -125,7 +127,6 @@
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Overview";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
             // 
             // metroLink1
             // 
@@ -141,7 +142,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(125, 283);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(149, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(148, 19);
             this.metroLabel6.TabIndex = 11;
             this.metroLabel6.Text = "Get help and support at";
             // 
@@ -162,7 +163,6 @@
             this.metroLabel5.Size = new System.Drawing.Size(16, 19);
             this.metroLabel5.TabIndex = 9;
             this.metroLabel5.Text = "0";
-            this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
             // metroLabel4
             // 
@@ -181,7 +181,6 @@
             this.onlinepltxt.Size = new System.Drawing.Size(16, 19);
             this.onlinepltxt.TabIndex = 7;
             this.onlinepltxt.Text = "0";
-            this.onlinepltxt.Click += new System.EventHandler(this.onlinepltxt_Click);
             // 
             // metroLabel3
             // 
@@ -205,7 +204,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(125, 39);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(105, 95);
+            this.metroLabel1.Size = new System.Drawing.Size(104, 95);
             this.metroLabel1.TabIndex = 4;
             this.metroLabel1.Text = "Server IP(local)\r\n\r\nServer IP(public)\r\n\r\n";
             // 
@@ -222,7 +221,66 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(188, 23);
             this.metroTextBox1.TabIndex = 2;
-            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.Loadbtn);
+            this.metroTabPage2.Controls.Add(this.listView1);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(699, 347);
+            this.metroTabPage2.TabIndex = 4;
+            this.metroTabPage2.Text = "OnlinePlayerList";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            // 
+            // Loadbtn
+            // 
+            this.Loadbtn.Location = new System.Drawing.Point(3, 318);
+            this.Loadbtn.Name = "Loadbtn";
+            this.Loadbtn.Size = new System.Drawing.Size(97, 23);
+            this.Loadbtn.TabIndex = 3;
+            this.Loadbtn.Text = "Load Player List";
+            this.Loadbtn.Click += new System.EventHandler(this.Loadbtn_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(667, 309);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 133;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "ID";
+            this.columnHeader2.Width = 61;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Level";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Trophies";
+            this.columnHeader4.Width = 69;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Previleges";
+            this.columnHeader5.Width = 98;
             // 
             // metroTabPage3
             // 
@@ -257,7 +315,7 @@
             this.metroTabPage5.HorizontalScrollbarBarColor = true;
             this.metroTabPage5.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(442, 202);
+            this.metroTabPage5.Size = new System.Drawing.Size(532, 202);
             this.metroTabPage5.TabIndex = 0;
             this.metroTabPage5.Text = "SendInboxMessage";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
@@ -354,7 +412,6 @@
             this.metroLabel19.Size = new System.Drawing.Size(86, 19);
             this.metroLabel19.TabIndex = 12;
             this.metroLabel19.Text = "SenderName";
-            this.metroLabel19.Click += new System.EventHandler(this.metroLabel19_Click);
             // 
             // metroTextBox7
             // 
@@ -363,7 +420,6 @@
             this.metroTextBox7.Size = new System.Drawing.Size(259, 23);
             this.metroTextBox7.TabIndex = 11;
             this.metroTextBox7.Text = "Admin";
-            this.metroTextBox7.Click += new System.EventHandler(this.metroTextBox7_Click);
             // 
             // metroLabel20
             // 
@@ -380,71 +436,11 @@
             this.metroTextBox8.Name = "metroTextBox8";
             this.metroTextBox8.Size = new System.Drawing.Size(259, 23);
             this.metroTextBox8.TabIndex = 9;
-            this.metroTextBox8.Click += new System.EventHandler(this.metroTextBox8_Click);
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.Loadbtn);
-            this.metroTabPage2.Controls.Add(this.listView1);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(699, 347);
-            this.metroTabPage2.TabIndex = 4;
-            this.metroTabPage2.Text = "PlayerList";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            // 
-            // Loadbtn
-            // 
-            this.Loadbtn.Location = new System.Drawing.Point(3, 318);
-            this.Loadbtn.Name = "Loadbtn";
-            this.Loadbtn.Size = new System.Drawing.Size(97, 23);
-            this.Loadbtn.TabIndex = 3;
-            this.Loadbtn.Text = "Load Player List";
-            this.Loadbtn.Click += new System.EventHandler(this.Loadbtn_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(667, 309);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 133;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "ID";
-            this.columnHeader2.Width = 61;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Level";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Trophies";
-            this.columnHeader4.Width = 69;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Previleges";
-            this.columnHeader5.Width = 98;
             // 
             // metroTabPage4
             // 
+            this.metroTabPage4.Controls.Add(this.txtPlayerGems);
+            this.metroTabPage4.Controls.Add(this.metroLabel18);
             this.metroTabPage4.Controls.Add(this.PlayerRankBox);
             this.metroTabPage4.Controls.Add(this.PlayerScoreBox);
             this.metroTabPage4.Controls.Add(this.metroLabel17);
@@ -468,7 +464,6 @@
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "Manage Players";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.Click += new System.EventHandler(this.metroTabPage4_Click);
             // 
             // PlayerRankBox
             // 
@@ -489,7 +484,7 @@
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Location = new System.Drawing.Point(115, 157);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(57, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(59, 19);
             this.metroLabel17.TabIndex = 16;
             this.metroLabel17.Text = "Trophies";
             // 
@@ -501,7 +496,6 @@
             this.metroLabel16.Size = new System.Drawing.Size(90, 19);
             this.metroLabel16.TabIndex = 15;
             this.metroLabel16.Text = "...........................";
-            this.metroLabel16.Click += new System.EventHandler(this.metroLabel16_Click);
             // 
             // metroLabel15
             // 
@@ -543,7 +537,6 @@
             this.lvlbox.Name = "lvlbox";
             this.lvlbox.Size = new System.Drawing.Size(152, 23);
             this.lvlbox.TabIndex = 10;
-            this.lvlbox.Click += new System.EventHandler(this.lvlbox_Click);
             // 
             // metroLabel13
             // 
@@ -594,7 +587,6 @@
             this.PlayerID.Name = "PlayerID";
             this.PlayerID.Size = new System.Drawing.Size(152, 23);
             this.PlayerID.TabIndex = 3;
-            this.PlayerID.Click += new System.EventHandler(this.PlayerID_Click);
             // 
             // metroLabel7
             // 
@@ -605,6 +597,22 @@
             this.metroLabel7.TabIndex = 2;
             this.metroLabel7.Text = "PlayerID";
             // 
+            // txtPlayerGems
+            // 
+            this.txtPlayerGems.Location = new System.Drawing.Point(187, 186);
+            this.txtPlayerGems.Name = "txtPlayerGems";
+            this.txtPlayerGems.Size = new System.Drawing.Size(152, 23);
+            this.txtPlayerGems.TabIndex = 20;
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.Location = new System.Drawing.Point(115, 186);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel18.TabIndex = 19;
+            this.metroLabel18.Text = "Gems";
+            // 
             // UCSUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,19 +621,19 @@
             this.Controls.Add(this.metroTabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            //this.Name = "UCSUI";
+            this.Name = "UCSUI";
             this.Text = "Ultrapowa Clash Server Manager";
             this.Load += new System.EventHandler(this.UCSUI_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabControl2.ResumeLayout(false);
             this.metroTabPage5.ResumeLayout(false);
             this.metroTabPage5.PerformLayout();
             this.metroTabPage6.ResumeLayout(false);
             this.metroTabPage6.PerformLayout();
-            this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage4.PerformLayout();
             this.ResumeLayout(false);
@@ -689,5 +697,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private MetroFramework.Controls.MetroTextBox txtPlayerGems;
+        private MetroFramework.Controls.MetroLabel metroLabel18;
     }
 }
