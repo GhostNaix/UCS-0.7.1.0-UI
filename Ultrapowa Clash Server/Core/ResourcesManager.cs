@@ -157,7 +157,7 @@ namespace UCS.Core
         /// <param name="persistent">Load the player or no.</param>
         /// <returns>The player data.</returns>
         /// <seealso cref="Level" />
-        public static Level GetPlayer(long id, bool persistent = false)
+        public static Level GetPlayer(long id, bool persistent = true)
         {
             var result = GetInMemoryPlayer(id);
             if (result == null)

@@ -276,8 +276,8 @@ namespace UCS.Core
         {
             using (ucsdbEntities context = new ucsdbEntities(m_vConnectionString))
             {
-                context.Configuration.AutoDetectChangesEnabled = false;
-                context.Configuration.ValidateOnSaveEnabled = false;
+                context.Configuration.AutoDetectChangesEnabled = true;
+                context.Configuration.ValidateOnSaveEnabled = true;
                 clan c = context.clan.Find((int) alliance.GetAllianceId());
                 if (c != null)
                 {
@@ -307,8 +307,8 @@ namespace UCS.Core
         public void Save(Level avatar)
         {
             ucsdbEntities context = new ucsdbEntities(m_vConnectionString);
-            context.Configuration.AutoDetectChangesEnabled = false;
-            context.Configuration.ValidateOnSaveEnabled = false;
+            context.Configuration.AutoDetectChangesEnabled = true;
+            context.Configuration.ValidateOnSaveEnabled = true;
             player p = context.player.Find(avatar.GetPlayerAvatar().GetId());
             if (p != null)
             {
@@ -344,8 +344,8 @@ namespace UCS.Core
             {
                 using (ucsdbEntities context = new ucsdbEntities(m_vConnectionString))
                 {
-                    context.Configuration.AutoDetectChangesEnabled = false;
-                    context.Configuration.ValidateOnSaveEnabled = false;
+                    context.Configuration.AutoDetectChangesEnabled = true;
+                    context.Configuration.ValidateOnSaveEnabled = true;
                     int transactionCount = 0;
                     foreach (Level pl in avatars)
                         lock (pl)

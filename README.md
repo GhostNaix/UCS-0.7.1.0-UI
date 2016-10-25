@@ -1,6 +1,6 @@
 #Ultrapowa Clash Server
 
-An awesome, irresistible Clash Of Clans server that has a huge awesome community background just to rock and roll the base. It is production ready and you can create your own private server like others. Come and join our community
+An awesome, irresistible Clash Of Clans server that has a huge and awesome community background just to rock and roll the base. It is production ready and you can create your own private server like others have. Come and join our community!
 
 #Websites
 
@@ -15,34 +15,34 @@ Go to the release section and download the compiled UCS there in accordance to t
 
 You can download the source code, edit it and compile it. And please, if you have made any perfomance change or bought any new features to life, then please make a pull request with your awesome work.
 
-To connect it with the game, you need the custom APK which you can download it from the give link below :
+To connect it with the game, you need the custom APK which you can download it from the given link below :
 
-* http://www.mediafire.com/download/b05ggfh57pbg068/Clash+of+Clans+8.332.16+Patched.apk
+* [Clash of Clans - Patched APK - v8.322.16](http://www.mediafire.com/download/b05ggfh57pbg068/Clash+of+Clans+8.332.16+Patched.apk)
 
 #Our developers
 
 * Ultrapowa									
-* ADeltaX								
+* ADeltaX		
+* CrayCray
+* Clash of Lights
+* DominikMC						
 * thecheater887
 
 #Our helpers
 
+* Chief
 * PatrikCoC
-* Clash of Lights
-* CrayCray
 * KnightKing
 
 #Ideas
 
 We are making an awesome Dashboard for UCS which is web based where you can manage your players, get the status of the server and do a lot more. You can manage the server from any place even if you don't have a computer. Pretty awesome, isn't it?
 
-![Dashboard Mockup](https://smartclashcoc.com/images/imac2013_right.png)
-
 #Developers needed
 
 We need to keep UCS up and we are the only Private server development community and we need you to be a part of it. UCS is fully coded on C#.NET and we want you to join us if you know the language.
 
-Contact us at [Ultrapowa Forum](http://ultrapowa.com/forum/)
+Contact us at: [Ultrapowa Forum](http://ultrapowa.com/forum/)
 
 #License
 
