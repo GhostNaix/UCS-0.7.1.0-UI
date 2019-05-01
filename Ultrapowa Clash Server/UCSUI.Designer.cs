@@ -621,7 +621,7 @@
             this.Controls.Add(this.metroTabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "UCSUI";
+            //this.Name = "UCSUI";
             this.Text = "Ultrapowa Clash Server Manager";
             this.Load += new System.EventHandler(this.UCSUI_Load);
             this.metroTabControl1.ResumeLayout(false);
